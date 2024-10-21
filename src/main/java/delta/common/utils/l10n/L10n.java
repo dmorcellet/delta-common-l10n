@@ -39,4 +39,17 @@ public class L10n
     NumberFormat format=LocalizedFormats.getRealNumberFormat(0,nbDigits);
     return format.format(number);
   }
+
+  /**
+   * Get a localized string for a number (double).
+   * @param number Value to use.
+   * @param minDigits Minimum number of digits.
+   * @param maxDigits Maximum number of digits.
+   * @return A localized string.
+   */
+  public static String getString(double number, int minDigits, int maxDigits)
+  {
+    NumberFormat format=LocalizedFormats.getRealNumberFormat(minDigits,maxDigits);
+    return format.format(number);
+  }
 }
